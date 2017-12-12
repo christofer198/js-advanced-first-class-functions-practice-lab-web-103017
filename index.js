@@ -38,3 +38,18 @@ const totalRevenue = function(drivers){
     return a + b;
   });
 }
+
+const averageRevenue = function(drivers){
+  const r = []
+  const a = drivers.filter(function(obj){
+    r.push(obj.revenue)
+  });
+
+  const total = r.reduce(function getSum(a, b) {
+    console.log(a)
+    return a + b;
+  });
+
+  return total/r.length
+
+}
