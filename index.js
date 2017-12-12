@@ -26,3 +26,15 @@ const driversByName = function(drivers){
     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
 });
 }
+
+const totalRevenue = function(){
+  const r = []
+  const a = drivers.filter(function(obj){
+    r.push(obj.revenue)
+  });
+
+  return r.reduce(function getSum(a, b) {
+    console.log(a)
+    return a + b;
+  });
+}
