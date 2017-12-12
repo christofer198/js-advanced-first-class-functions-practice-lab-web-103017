@@ -20,5 +20,9 @@ const driversByRevenue = function(drivers){
 }
 
 const driversByName = function(drivers){
-  return drivers.slice().sort()
+  return drivers.slice().sort(function(a, b) {
+    var textA = a.name.toUpperCase();
+    var textB = b.name.toUpperCase();
+    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+});
 }
