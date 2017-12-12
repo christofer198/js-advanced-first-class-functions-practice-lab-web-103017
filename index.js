@@ -27,7 +27,7 @@ const driversByName = function(drivers){
 });
 }
 
-const totalRevenue = function(){
+const driversTotalRevenue = function(){
   const r = []
   const a = drivers.filter(function(obj){
     r.push(obj.revenue)
